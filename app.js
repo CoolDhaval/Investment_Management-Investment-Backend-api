@@ -5,7 +5,12 @@ const dotenv = require('dotenv');
 dotenv.config();
 const bodyParser = require('body-parser');
 
-app.use(cors()); // <--- allow all origins (or restrict below)
+//app.use(cors()); // <--- allow all origins (or restrict below)
+app.use(cors({
+    origin: 'http://localhost:4300',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
 const companyRoutes = require('./routes/companyRoutes');
 const clientRoutes = require('./routes/clientRoutes');
 const schemeRoutes = require('./routes/schemeRoutes');
