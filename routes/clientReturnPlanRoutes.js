@@ -29,7 +29,7 @@ router.get('/client-return-plan', async (req, res) => {
   const { clientCode, companyCode } = req.query;
   console.log(clientCode);
   console.log(companyCode);
-  let sql = `SELECT B.CompanyName,C.ClientName,A.* FROM ClientReturnPlan A,companymaster B,clientmaster C WHERE A.CompanyCode=B.CompanyCode And A.ClientCode = C.ClientCode`;
+  let sql = `SELECT B.CompanyName,C.ClientName,A.* FROM clientreturnplan A,companymaster B,clientmaster C WHERE A.CompanyCode=B.CompanyCode And A.ClientCode = C.ClientCode`;
   const params = [];
 
   if (clientCode) {
