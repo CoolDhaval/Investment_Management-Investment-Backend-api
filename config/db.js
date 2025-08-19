@@ -2,10 +2,10 @@ const mysql = require('mysql2');
 
 // Create MySQL connection pool
 const pool = mysql.createPool({
-  host: 'localhost',
-  port: 3308,                // Your custom MySQL port
+  host: 'gondola.proxy.rlwy.net',//'localhost',
+  port: 47965,//3308,                // Your custom MySQL port
   user: 'root',              // Your MySQL username
-  password: '',              // Your MySQL password (empty if not set)
+  password: 'hiaXrCzDzGvWGaDMdAhPppLPqjYyQknR',              // Your MySQL password (empty if not set)
   database: 'investment_schemes', // Your DB name
   waitForConnections: true,
   connectionLimit: 10,
