@@ -15,7 +15,7 @@ app.use(cors({
   */
   const allowedOrigins = [
     'http://localhost:4300',
-    'https://cooldhaval.github.io/'
+    'https://cooldhaval.github.io'
   ];
   
   app.use(cors({
